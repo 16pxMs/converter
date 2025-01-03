@@ -24,22 +24,18 @@ convertBtn.addEventListener("click", function(event) {
 
 function conversionLogic(inputNumber) {
 
-    const meterTofeet = (inputNumber * meterTofeet).toFixed(2)
-    const literTogallon = (inputNumber * literTogallon).toFixed(2)
-    const kilogramTogallon = (inputNumber * kilogramTogallon).toFixed(2)
+    const meter = (inputNumber * meterTofeet).toFixed(2)
+    const liter = (inputNumber * literTogallon).toFixed(2)
+    const kilogram = (inputNumber * kilogramTogallon).toFixed(2)
 
-    return {meterTofeet, literTogallon, kilogramTogallon }
+    return {meter, liter, kilogram} //this return allows the variables to go outside the function scope.
 
 }
 
 function renderResults(results) {
 
-    if (!results) {
-        console.error('No results to render');
-        return;
-    }
 
-    meterResult.innerHTML = `Meters to Feet: ${results.meterTofeet}`
-    literResult.innerHTML = `Liters to Gallons: ${results.literTogallon}`
-    kilogramResult.innerHTML = `Kilograms to Pounds: ${results.kilogramTogallon}`
+    meterResult.innerHTML = `Meters to Feet: ${results.meter}`
+    literResult.innerHTML = `Liters to Gallons: ${results.liter}`
+    kilogramResult.innerHTML = `Kilograms to Pounds: ${results.kilogram}`
 }
